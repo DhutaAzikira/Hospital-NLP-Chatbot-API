@@ -7,7 +7,7 @@ from fastapi import Depends
 load_dotenv()
 
 # === Database Connection ===
-DATABASE_URL = "mysql+mysqlconnector://avnadmin:AVNS_A9ZtoDM9GQ7x54SdoYw@hospital-chatbot-service-hospital-chatbot-management.k.aivencloud.com:27086/defaultdb"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 engine = create_engine(
     DATABASE_URL,

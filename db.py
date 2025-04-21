@@ -1,9 +1,14 @@
+import os
+from dotenv import load_dotenv
 from sqlmodel import Session, create_engine
 from typing import Annotated
 from fastapi import Depends
 
+load_dotenv()
+
 # === Database Connection ===
-DATABASE_URL = "mysql+pymysql://duta:sayadhuta@localhost:3306/hospital"
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 engine = create_engine(DATABASE_URL, echo=True)
 
 def get_session():

@@ -7,13 +7,13 @@ from fastapi import Depends
 load_dotenv()
 
 # === Database Connection ===
-DATABASE_URL = "mysql://avnadmin:AVNS_A9ZtoDM9GQ7x54SdoYw@hospital-chatbot-service-hospital-chatbot-management.k.aivencloud.com:27086/defaultdb?ssl-mode=REQUIRED"
+DATABASE_URL = "mysql+mysqlconnector://avnadmin:AVNS_A9ZtoDM9GQ7x54SdoYw@hospital-chatbot-service-hospital-chatbot-management.k.aivencloud.com:27086/defaultdb"
 
 engine = create_engine(
     DATABASE_URL,
     echo=True,
     connect_args={
-        "ssl_ca": "/certs/ca.pem",  # Full path to your CA cert
+        "ssl_ca": "certs/ca.pem",  # Full path to your CA cert
         "ssl_verify_cert": True         # Enforce SSL certificate validation
     }
 )

@@ -1,3 +1,10 @@
 >ADD FALLBACK TO TIME IN chatbotrouter.py handle_user_input (if time does not make sense result in current time instead)
 >ADD a name request in chatbot
 >ADD many more fallback and validation
+
+fastapi==0.115.12
+sentence-transformers
+sqlmodel
+python-dotenv~=1.1.0
+dateparser~=1.2.1
+pymysql

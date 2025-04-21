@@ -3,7 +3,7 @@ from intent_dictionary import intent_dictionary
 
 class IntentClassifier:
     def __init__(self):
-        self.model = SentenceTransformer('./models/all-MiniLM-L6-v2')
+        self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.intents = intent_dictionary
         # Flatten the intents and compute embeddings
         self.intent_phrases = [phrase for phrases in self.intents.values() for phrase in phrases]

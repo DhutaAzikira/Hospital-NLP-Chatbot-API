@@ -10,6 +10,7 @@ async def lifespan(app: FastAPI):
     # Startup logic
     print("Application startup")
 
+
     yield
 
     # Shutdown logic
